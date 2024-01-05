@@ -3,34 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Printers Onlyy Fans</title>
+    <title>Printers Only Fans</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+        /* CSS styling */
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; /* Removes default margin */
+            padding: 0; /* Removes default padding */
         }
-        header, footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
+        header { 
+            background-color: #333; 
+            color: white; 
+            padding: 1em; 
+            text-align: center; 
         }
-        main {
-            flex: 1;
-            padding: 1em;
-            background-color: #f4f4f4;
+        h1, h2 {
+            margin: 0; /* Removes default margin for headings */
         }
+        /* Additional styles can be added here */
     </style>
-    
 </head>
 <body>
     <header>
-        <h1>Registration Page</h1>
+        <h1>Printers Only Fans</h1>
+        <h2>"We know you like to watch"</h2>
     </header>
+    <!-- The rest of your page content goes here -->
+</body>
+</html>
+
     <main>
         <!-- Stuffs go here -->
     </main>
