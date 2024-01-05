@@ -8,8 +8,8 @@
         /* CSS styling */
         body { 
             font-family: Arial, sans-serif; 
-            margin: 0; /* Removes default margin */
-            padding: 0; /* Removes default padding */
+            margin: 0;
+            padding: 0;
         }
         header { 
             background-color: #333; 
@@ -18,26 +18,40 @@
             text-align: center; 
         }
         h1, h2 {
-            margin: 0; /* Removes default margin for headings */
+            margin: 0;
         }
         main {
-            padding: 1em; /* Adjust padding as needed */
+            padding: 1em;
             text-align: center;
         }
         footer {
-            background-color: #444; /* Consistent with the header */
+            background-color: #444;
             color: white;
             padding: 1em;
             text-align: center;
         }
         .custom-banner {
-            margin-bottom: 1em; /* Space above the copyright text */
+            margin-bottom: 1em;
         }
         .under-construction {
             font-size: 1.5em;
-            color: #d9534f; /* Adjust the color as needed */
+            color: #d9534f;
         }
-        /* Additional styles can be added here */
+        .sign-in-button, .register-link {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .seductive-tagline {
+            font-style: italic;
+            color: #d9534f;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -51,6 +65,11 @@
             <p>We are currently working on something awesome. Stay tuned!</p>
             <p>Thank you for your patience.</p>
         </div>
+        <a href="signin.html" class="sign-in-button">Sign In</a>
+        <div>
+            <a href="register.html" class="register-link">Not a Member? Register here</a>
+            <p class="seductive-tagline">You know you want to...</p>
+        </div>
     </main>
 
     <footer>
@@ -63,3 +82,5 @@
     </footer>
 </body>
 </html>
+
+
