@@ -8,8 +8,11 @@
         /* CSS styling */
         body { 
             font-family: Arial, sans-serif; 
-            margin: 0; /* Removes default margin */
-            padding: 0; /* Removes default padding */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
         }
         header { 
             background-color: #333; 
@@ -17,43 +20,33 @@
             padding: 1em; 
             text-align: center; 
         }
-        nav {
-            background-color: #444;
-            padding: 0.5em;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
-            display: inline-block;
-        }
         h1, h2 {
-            margin: 0; /* Removes default margin for headings */
+            margin: 0;
         }
         main {
-            padding: 1em; /* Adjust padding as needed */
-            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
         footer {
-            background-color: #444; /* Consistent with the header */
+            background-color: #444;
             color: white;
             padding: 1em;
             text-align: center;
         }
         .custom-banner {
-            margin-bottom: 1em; /* Space above the copyright text */
-        }
-        .under-construction {
-            font-size: 1.5em;
-            color: #d9534f; /* Adjust the color as needed */
+            margin-bottom: 1em;
         }
         .sign-in-form {
-            display: inline-block;
+            text-align: center;
         }
         input[type="email"], input[type="password"] {
             padding: 5px;
             margin: 5px;
+            display: block;
+            margin-bottom: 10px;
         }
         button[type="submit"] {
             background-color: #333;
@@ -61,8 +54,18 @@
             border: none;
             padding: 5px 10px;
             cursor: pointer;
+            display: block;
+            margin: auto;
         }
-        /* Additional styles can be added here */
+        .footer-links {
+            display: flex;
+            justify-content: center;
+        }
+        .footer-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -71,20 +74,11 @@
         <h2>"We know you like to watch"</h2>
     </header>
 
-    <nav>
-        <a href="/home">Home</a>
-        <a href="/about">About</a>
-        <form class="sign-in-form" action="/login" method="post">
-            <input type="email" id="email" name="email" placeholder="Email Address" required>
-            <input type="password" id="password" name="password" placeholder="Password" required>
-            <button type="submit">Sign In</button>
-        </form>
-    </nav>
-
     <main>
-        <div class="under-construction">
-            <p>We are currently working on something awesome. Stay tuned!</p>
-            <p>Thank you for your patience.</p>
+        <div class="sign-in-form">
+            <input type="email" id="email" name="email" placeholder="Email Address" required disabled>
+            <input type="password" id="password" name="password" placeholder="Password" required disabled>
+            <button type="submit" disabled>Sign In</button>
         </div>
     </main>
 
@@ -94,10 +88,11 @@
             <p>If you prefer to donate directly, please visit their direct site:</p>
             <a href="https://www.stjude.org" target="_blank">stjude.org</a>
         </div>
+        <div class="footer-links">
+            <a href="/home">Home</a>
+            <a href="/about">About</a>
+        </div>
         <p>© Printers Only Fans Brought to you by 1728studios.com</p>
     </footer>
 </body>
 </html>
-
-
-
