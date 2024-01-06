@@ -2,26 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Printers Only Fans</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printers Only Fans - Live Stream</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* CSS styling */
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0;
+            padding: 0;
+        }
+        header { 
+            background-color: #333; 
+            color: white; 
+            padding: 1em; 
+            text-align: center; 
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        main {
+            padding: 1em;
             text-align: center;
-            background-color: #f4f4f4;
         }
-        .stream-container {
-            margin: 20px auto;
-            width: 650px;
+        .webcam-feed {
+            max-width: 100%;
+            height: auto;
             border: 1px solid #ddd;
-            padding: 10px;
-            background: #fff;
         }
+        footer {
+            background-color: #444;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        .custom-banner {
+            margin-bottom: 1em;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            display: inline-block;
+        }
+        /* Additional styles can be added here */
     </style>
 </head>
 <body>
-    <div class="stream-container">
-        <img src="http://75.70.70.174:8081/webcam/?action=stream" alt="Tinkerville Workshop >
-    </div>
+    <header>
+        <h1>Printers Only Fans</h1>
+        <h2>"We know you like to watch"</h2>
+    </header>
+
+    <main>
+        <h3>Live Printer Stream</h3>
+        <!-- Webcam feed -->
+        <video controls autoplay>
+            <source src="http://10.0.0.19/webcam/?action=stream" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </main>
+
+    <footer>
+        <div class="custom-banner">
+            <p>60% of all proceeds are donated to St. Jude Children's Research Hospital in the name of 1728Studios LLC.</p>
+            <p>If you prefer to donate directly, please visit their direct site:</p>
+            <a href="https://www.stjude.org" target="_blank">stjude.org</a>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="/about">About</a>
+        </div>
+        <p>© Printers Only Fans Brought to you by 1728studios.com</p>
+    </footer>
 </body>
 </html>
+
 
