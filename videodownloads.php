@@ -66,6 +66,15 @@
         ?>
     </main>
     <footer>
+        <div class="custom-banner">
+            <p>60% of all proceeds are donated to St. Jude Children's Research Hospital in the name of 1728Studios LLC.</p>
+            <p>If you prefer to donate directly, please visit their direct site:</p>
+            <a href="https://www.stjude.org" target="_blank">stjude.org</a>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="https://www.1728studios.com/about" target="_blank">About</a>
+        </div>
         <p>© Printers Only Fans Brought to you by 1728studios.com</p>
     </footer>
 </body>
