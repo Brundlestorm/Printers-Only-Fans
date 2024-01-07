@@ -1,4 +1,6 @@
 <?php
+session_start(); // Start the session to use session variables
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Database credentials
     $servername = "localhost";
@@ -14,34 +16,52 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Get user input from the form
-    $email = $_POST['email'];
+    // Sanitize and validate user input
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $_SESSION['error'] = "Invalid email format";
+        header("Location: registrationpage.html"); // Redirect back to registration page
+        exit;
+    }
+
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirm-password'];
-    $address = $_POST['address'];
-    $printSuggestion = $_POST['print-suggestion'];
+    $address = filter_var($_POST['address'], FILTER_SANITIZE_STRING);
+    $printSuggestion = filter_var($_POST['print-suggestion'], FILTER_SANITIZE_STRING);
 
     // Password validation
     if ($password != $confirmPassword) {
-        echo "Passwords do not match!";
+        $_SESSION['error'] = "Passwords do not match. May want to try that one again.";
+        header("Location: registrationpage.html");
         exit;
     }
+
+    // Check if email already exists
+    $stmt = $conn->prepare("SELECT id FROM users WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->store_result();
+    if ($stmt->num_rows > 0) {
+        $_SESSION['error'] = "Email already registered. Please use a different email.";
+        header("Location: registrationpage.html");
+        exit;
+    }
+    $stmt->close();
 
     // Hash the password
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    // Prepare and bind
+    // Insert the new user
     $stmt = $conn->prepare("INSERT INTO users (email, password, address, print_suggestion) VALUES (?, ?, ?, ?)");
     $stmt->bind_param("ssss", $email, $hashedPassword, $address, $printSuggestion);
-
-    // Execute the prepared statement
     if ($stmt->execute()) {
-        echo "New record created successfully";
+        $_SESSION['success'] = "Thank you for your submission. We believe every child should have a chance.";
+        header("Location: mainpage.html"); // Redirect to main page
     } else {
-        echo "Error: " . $stmt->error;
+        $_SESSION['error'] = "Error: " . $stmt->error;
+        header("Location: registrationpage.html");
     }
 
-    // Close statement and connection
     $stmt->close();
     $conn->close();
 }
