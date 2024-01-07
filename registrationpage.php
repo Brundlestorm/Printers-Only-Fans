@@ -69,7 +69,7 @@
     </header>
 
     <main>
-        <form class="registration-form" action="/submit_registration" method="post">
+        <form class="registration-form" action="register_user.php" method="post">
             <label for="email">Username (Email):</label>
             <input type="email" id="email" name="email" placeholder="Email Address" required>
 
