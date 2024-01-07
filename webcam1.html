@@ -24,10 +24,10 @@
             padding: 1em;
             text-align: center;
         }
-        .webcam-feed {
+        .youtube-live-stream {
+            margin: auto;
             max-width: 100%;
             height: auto;
-            border: 1px solid #ddd;
         }
         footer {
             background-color: #444;
@@ -44,7 +44,6 @@
             padding: 5px 10px;
             display: inline-block;
         }
-        /* Additional styles can be added here */
     </style>
 </head>
 <body>
@@ -55,12 +54,8 @@
 
     <main>
         <h3>Live Printer Stream</h3>
-        <div id="webcam_rotator">
-            <div class="webcam_fixed_ratio">
-                <div class="webcam_fixed_ratio_inner">
-                    <img id="webcam_image" src="http://0.0.0.0:8080/webcam/?action=stream" alt="Live Printer Stream" class="webcam-feed">
-                </div>
-            </div>
+        <div class="youtube-live-stream">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jz60lBnpzOY?si=hysKjqcPLSBOZZP0&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </main>
 
