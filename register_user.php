@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $_SESSION['error'] = "Invalid email format";
-        header("Location: registrationpage.html"); // Redirect back to registration page
+        header("Location: registrationpage.php"); // Redirect back to registration page
         exit;
     }
 
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Password validation
     if ($password != $confirmPassword) {
         $_SESSION['error'] = "Passwords do not match. May want to try that one again.";
-        header("Location: registrationpage.html");
+        header("Location: registrationpage.php");
         exit;
     }
 
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->store_result();
     if ($stmt->num_rows > 0) {
         $_SESSION['error'] = "Email already registered. Please use a different email.";
-        header("Location: registrationpage.html");
+        header("Location: registrationpage.php");
         exit;
     }
     $stmt->close();
@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: homepage.html"); // Redirect to main page
     } else {
         $_SESSION['error'] = "Error: " . $stmt->error;
-        header("Location: registrationpage.html");
+        header("Location: registrationpage.php");
     }
 
     $stmt->close();
