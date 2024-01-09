@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssss", $email, $hashedPassword, $address, $printSuggestion);
     if ($stmt->execute()) {
         $_SESSION['success'] = "Thank you for your submission. We believe every child should have a chance.";
-        header("Location: mainpage.html"); // Redirect to main page
+        header("Location: homepage.html"); // Redirect to main page
     } else {
         $_SESSION['error'] = "Error: " . $stmt->error;
         header("Location: registrationpage.html");
