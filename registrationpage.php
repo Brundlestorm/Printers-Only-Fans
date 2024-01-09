@@ -5,6 +5,8 @@ session_start(); // Start the session
 $error = isset($_SESSION['error']) ? $_SESSION['error'] : '';
 $success = isset($_SESSION['success']) ? $_SESSION['success'] : '';
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
