@@ -75,11 +75,11 @@
     </header>
 
     <main>
-        <div class="sign-in-form">
-            <form action="sign_in.php" method="post">
-                <input type="email" id="email" name="email" placeholder="Email Address" required>
-                <input type="password" id="password" name="password" placeholder="Password" required>
-                <button type="submit">Sign In</button>
+        <div class="password-reset-form">
+            <form action="send_reset_link.php" method="post">
+                <label for="email">Enter your registered email address:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Send Reset Link</button>
             </form>
         </div>
     </main>
