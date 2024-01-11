@@ -8,3 +8,7 @@ Can we hide the /document this/ .php info on the URL for the site?
 
 Pictures of the items for download? Teasers? Maybe add random pics to main page (rotate every 2 minutes or so)
 
+Need video library to show data set form "octoprint" mysql
+
+sort out embed for video player page
+
