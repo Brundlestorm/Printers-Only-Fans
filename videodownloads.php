@@ -34,7 +34,7 @@
         <?php
         $servername = "localhost";
         $username = "octoprint";
-        $password = "Dwonloadmore1";
+        $password = "Downloadmore1";
         $dbname = "timelapse_db";
 
         // Create connection
