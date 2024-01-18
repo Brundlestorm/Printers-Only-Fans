@@ -6,19 +6,38 @@ session_start();
 
 $filename = $_GET['file'];
 
-// Locate the file on the server
-// This could involve querying the database to get the file path
-// For example, you might have a function getFilepath($filename) that returns the actual file path
+$servername = "localhost";
+$username = "octoprint";
+$password = "Downloadmore1";
+$dbname = "timelapse_db";
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-$filepath = getFilepath($filename);
-
-// Serve the file
-if (file_exists($filepath)) {
-    header('Content-Type: ' . mime_content_type($filepath));
-    header('Content-Disposition: attachment; filename="' . basename($filepath) . '"');
-    readfile($filepath);
-    exit;
-} else {
-    echo "File not found.";
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+
+$sql = "SELECT filepath FROM videos WHERE filename = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("s", $filename);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $filepath = $row['filepath'];
+
+    if (file_exists($filepath)) {
+        header('Content-Type: ' . mime_content_type($filepath));
+        header('Content-Disposition: attachment; filename="' . basename($filepath) . '"');
+        readfile($filepath);
+    } else {
+        echo "File not found.";
+    }
+} else {
+    echo "Invalid file request.";
+}
+
+$stmt->close();
+$conn->close();
 ?>
+
