@@ -54,9 +54,8 @@ if (isset($_SESSION['user_id'])) {
         <section class="w-full md:w-1/3 p-4 card" style="border: 2px solid white; border-radius: 8px;">
             <h2 class="text-3xl font-bold mb-4">Donation</h2>
             <p>60% of all proceeds are donated to St. Jude Children's Research Hospital in the name of 1728Studios LLC.</p>
-            <div class="mt-4">
-                <a href="https://www.stjude.org" target="_blank" class="bg-black text-white border-none rounded-full px-5 py-2 transition-colors duration-300 ease-linear hover:bg-gray-800 inline-block text-center">Donate Now</a>
-            </div>
+            <p class="text-sm">If you prefer to donate directly, please visit their official site:</p>
+            <a href="https://www.stjude.org" target="_blank" class="text-blue-400 hover:text-blue-300 text-sm">stjude.org</a>
         </section>
         
 
