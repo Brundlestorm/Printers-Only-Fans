@@ -1,3 +1,14 @@
+<?php
+session_start(); // Start the session
+
+// Check if the user is not signed in
+if (!isset($_SESSION['user_id'])) {
+    // Redirect to the sign-in page
+    header("Location: signin.html");
+    exit;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
