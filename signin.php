@@ -1,3 +1,13 @@
+<?php
+session_start(); // Start the session
+
+// Check if the user is signed in
+if (isset($_SESSION['user_id'])) {
+    // Redirect to homepage.html
+    header("Location: homepage.html");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
