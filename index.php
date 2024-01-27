@@ -1,3 +1,13 @@
+<?php
+session_start(); // Start the session
+
+// Check if the user is signed in
+if (isset($_SESSION['user_id'])) {
+    // Redirect to homepage.html
+    header("Location: homepage.html");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en" class="h-full">
 <head>
@@ -12,7 +22,7 @@
         <header class="bg-zinc-800">
             <nav class="py-4 flex justify-end items-center container mx-auto">
                 <div class="space-x-4 mr-4">
-                    <a href="index.html" class="hover:text-zinc-300 hover-effect">Home</a>
+                    <a href="homepage.html" class="hover:text-zinc-300 hover-effect">Home</a>
                     <a href="#" class="hover:text-zinc-300 hover-effect">Features</a>
                     <a href="#" class="hover:text-zinc-300 hover-effect">Pricing</a>
                     <a href="#" class="hover:text-zinc-300 hover-effect">Contact</a>
