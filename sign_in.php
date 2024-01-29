@@ -44,13 +44,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             // Invalid password
             $_SESSION['error'] = "Invalid email or password.";
-            header("Location: signin.html");
+            header("Location: signin.php");
             exit;
         }
     } else {
         // No user found
         $_SESSION['error'] = "Invalid email or password.";
-        header("Location: signin.html");
+        header("Location: signin.php");
         exit;
     }
 
