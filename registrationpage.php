@@ -7,7 +7,7 @@ $success = isset($_SESSION['success']) ? $_SESSION['success'] : '';
 ?>
 
 
-<?php include 'header'; ?>
+<?php include 'header.php'; ?>
 
 
     <section class="flex justify-center items-center">
@@ -56,6 +56,6 @@ $success = isset($_SESSION['success']) ? $_SESSION['success'] : '';
     
 
 
-    <?php include 'footer'; ?>
+    <?php include 'footer.php'; ?>
 </body>
 </html>

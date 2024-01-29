@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 ?>
-<?php include 'header'; ?>
+<?php include 'header.php'; ?>
 
 
     <section class="flex justify-center items-center">
@@ -26,6 +26,6 @@ if (!isset($_SESSION['user_id'])) {
 </main>
 
 
-<?php include 'footer'; ?>
+<?php include 'footer.php'; ?>
 </body>
 </html>
