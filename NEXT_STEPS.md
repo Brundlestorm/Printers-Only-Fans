@@ -4,7 +4,7 @@ Need to add link to credit card submission (page and functionality)
 
 Embed link to youtube without seeing URL to limit sharing .
 
-Can we hide the /document this/ .php info on the URL for the site?
+Can we hide the /document this/  info on the URL for the site?
 
 Pictures of the items for download? Teasers? Maybe add random pics to main page (rotate every 2 minutes or so)
 

@@ -4,13 +4,13 @@ session_start(); // Start the session
 // Check if the user is not signed in
 if (!isset($_SESSION['user_id'])) {
     // Redirect to the sign-in page
-    header("Location: signin.php");
+    header("Location: signin");
     exit;
 }
 
 ?>
 
-<?php include 'header.php'; ?>
+<?php include 'header'; ?>
 
 
     <section class="flex justify-center items-center">
@@ -45,7 +45,7 @@ if (!isset($_SESSION['user_id'])) {
         if ($result->num_rows > 0) {
             echo "<ul>";
             while($row = $result->fetch_assoc()) {
-                echo "<li><a href='serve_file.php?file=" . urlencode($row["filename"]) . "'>" . htmlspecialchars($row["filename"]) . "</a></li>";
+                echo "<li><a href='serve_file?file=" . urlencode($row["filename"]) . "'>" . htmlspecialchars($row["filename"]) . "</a></li>";
             }
             echo "</ul>";
         } else {
@@ -60,7 +60,7 @@ if (!isset($_SESSION['user_id'])) {
     
 
 
-    <?php include 'footer.php'; ?>
+    <?php include 'footer'; ?>
 </body>
 </html>
 

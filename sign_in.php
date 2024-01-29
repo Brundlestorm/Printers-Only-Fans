@@ -39,18 +39,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['email'] = $email;
 
             // Redirect to main page or dashboard
-            header("Location: homepage.php");
+            header("Location: homepage");
             exit;
         } else {
             // Invalid password
             $_SESSION['error'] = "Invalid email or password.";
-            header("Location: signin.php");
+            header("Location: signin");
             exit;
         }
     } else {
         // No user found
         $_SESSION['error'] = "Invalid email or password.";
-        header("Location: signin.php");
+        header("Location: signin");
         exit;
     }
 

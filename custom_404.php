@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include 'header'; ?>
        
 
     <section class="flex justify-center items-center">
@@ -14,12 +14,12 @@
         <h1 class="text-4xl font-bold mb-4">Woah there, partner!</h1>
         <p class="text-lg mb-4">Looks like you've stumbled upon our cowboy by mistake. This ain't the page you were lookin' for, but since you're here, why not enjoy the view? He doesn't mind the company.</p>
         <div>
-            <button onclick="window.location.href='homepage.php';" class="bg-zinc-800 text-white py-2 px-4 rounded hover:bg-zinc-700 transition duration-200 ease-in-out mb-4">Mosey on back to the Homepage</button>
+            <button onclick="window.location.href='homepage';" class="bg-zinc-800 text-white py-2 px-4 rounded hover:bg-zinc-700 transition duration-200 ease-in-out mb-4">Mosey on back to the Homepage</button>
             <button onclick="alert('Just kidding, there\'s nowhere to stay! Head on back home, partner.');" class="bg-zinc-800 text-white py-2 px-4 rounded hover:bg-zinc-700 transition duration-200 ease-in-out">Stay with the Cowboy</button>
         </div>
     </main>
     
     
-    <?php include 'footer.php'; ?>
+    <?php include 'footer'; ?>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include 'header'; ?>
 
 
     <section class="flex justify-center items-center">
@@ -14,6 +14,6 @@
         </main>
         
 
-        <?php include 'footer.php'; ?>
+        <?php include 'footer'; ?>
     </body>
     </html>

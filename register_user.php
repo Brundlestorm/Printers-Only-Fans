@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $_SESSION['error'] = "Invalid email format";
-        header("Location: registrationpage.php"); // Redirect back to registration page
+        header("Location: registrationpage"); // Redirect back to registration page
         exit;
     }
 
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Password validation
     if ($password != $confirmPassword) {
         $_SESSION['error'] = "Passwords do not match. May want to try that one again.";
-        header("Location: registrationpage.php");
+        header("Location: registrationpage");
         exit;
     }
 
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->store_result();
     if ($stmt->num_rows > 0) {
         $_SESSION['error'] = "Email already registered. Please use a different email.";
-        header("Location: registrationpage.php");
+        header("Location: registrationpage");
         exit;
     }
     $stmt->close();
@@ -56,10 +56,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssss", $email, $hashedPassword, $address, $printSuggestion);
     if ($stmt->execute()) {
         $_SESSION['success'] = "Thank you for your submission. We believe every child should have a chance.";
-        header("Location: homepage.php"); // Redirect to main page
+        header("Location: homepage"); // Redirect to main page
     } else {
         $_SESSION['error'] = "Error: " . $stmt->error;
-        header("Location: registrationpage.php");
+        header("Location: registrationpage");
     }
 
     $stmt->close();

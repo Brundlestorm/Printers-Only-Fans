@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include 'header'; ?>
 
 
     <section class="flex justify-center items-center">
@@ -11,7 +11,7 @@
 
      <main class="flex items-center justify-center min-h-screen">
     <div class="password-reset-form w-full max-w-md mx-auto">
-        <form action="update_password.php" method="post" class="bg-black p-6 rounded-lg shadow-lg">
+        <form action="update_password" method="post" class="bg-black p-6 rounded-lg shadow-lg">
             <input type="hidden" name="token" value="<?php echo $_GET['token']; ?>">
             
             <div class="mb-6">
@@ -30,6 +30,6 @@
 </main>
 
 
-<?php include 'footer.php'; ?>
+<?php include 'footer'; ?>
 </body>
 </html>

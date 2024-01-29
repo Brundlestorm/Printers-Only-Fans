@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // ... Database query to store token ...
 
         // Send the email with the reset link
-        $resetLink = "https://yourdomain.com/reset_password.php?token=" . $token;
+        $resetLink = "https://yourdomain.com/reset_password?token=" . $token;
         $subject = "Password Reset Request";
         $body = "Please click on the following link to reset your password: " . $resetLink;
         // ... Send email logic ...

@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include 'header'; ?>
        
   
     <section class="flex justify-center items-center">
@@ -10,11 +10,11 @@
 
 
     <main class="container mx-auto my-8 mt-36 flex flex-row items-center justify-center container-mobile">
-        <a href="webcam1.php" class="card-button card-button-mobile hover-effect mr-4">Live Stream</a>
-        <a href="videolibrary.php" class="card-button card-button-mobile hover-effect">Download Library</a>
+        <a href="webcam1" class="card-button card-button-mobile hover-effect mr-4">Live Stream</a>
+        <a href="videolibrary" class="card-button card-button-mobile hover-effect">Download Library</a>
     </main>
     
 
-    <?php include 'footer.php'; ?>
+    <?php include 'footer'; ?>
 </body>
 </html>
