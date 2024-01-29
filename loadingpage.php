@@ -1,5 +1,6 @@
-<!DOCTYPE html>
 <?php include 'header.php'; ?>
+
+
     <section class="flex justify-center items-center">
     <video class="w-48 h-48 rounded-full border-4 border-zinc-400 ml-4 mt-4" loop autoplay playsinline muted>
         <source src="logo.mp4" type="video/mp4">

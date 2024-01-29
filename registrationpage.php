@@ -7,7 +7,6 @@ $success = isset($_SESSION['success']) ? $_SESSION['success'] : '';
 ?>
 
 
-<!DOCTYPE html>
 <?php include 'header.php'; ?>
 
 

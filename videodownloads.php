@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 ?>
-<!DOCTYPE html>
+
 <?php include 'header.php'; ?>
 
 
