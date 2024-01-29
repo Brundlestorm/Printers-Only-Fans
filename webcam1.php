@@ -10,29 +10,9 @@ if (!isset($_SESSION['user_id'])) {
 
 ?>
 <!DOCTYPE html>
-<html lang="en" class="h-full">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Printers Only Fans</title>
-    <link rel="stylesheet" href="index.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<body class="bg-zinc-950 text-white font-sans">
-    <canvas id="myCanvas"></canvas>
-    <div class="relative">
-        <header class="bg-zinc-800">
-            <nav class="py-4 flex justify-end items-center container mx-auto">
-                <div class="space-x-4 mr-4">
-                    <a href="homepage.html" class="hover:text-zinc-300 hover-effect">Home</a>
-                    <a href="#" class="hover:text-zinc-300 hover-effect">Features</a>
-                    <a href="#" class="hover:text-zinc-300 hover-effect">Pricing</a>
-                    <a href="#" class="hover:text-zinc-300 hover-effect">Contact</a>
-                </div>
-            </nav>
-        </header>
-       
-    </div>
+<?php include 'header.php'; ?>
+
+
     <section class="flex justify-center items-center">
     <video class="w-48 h-48 rounded-full border-4 border-zinc-400 ml-4 mt-4" loop autoplay playsinline muted>
         <source src="logo.mp4" type="video/mp4">
