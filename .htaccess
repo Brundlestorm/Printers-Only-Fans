@@ -1,13 +1,15 @@
-ErrorDocument 404 /custom_404.php
-
-
+Options -MultiViews
 RewriteEngine On
+
+# Remove .php extension from URLs
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.+)$ $1.php [L,QSA]
 
+# Remove .html extension from URLs
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+)$ $1.html [L,QSA]
 
-
+# Redirect to custom_404.php if page is not found
+ErrorDocument 404 /custom_404.php
