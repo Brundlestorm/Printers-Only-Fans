@@ -8,15 +8,16 @@ $success = isset($_SESSION['success']) ? $_SESSION['success'] : '';
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Printers Only Fans</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Printers Only Fans</title>
     <link rel="stylesheet" href="index.css">
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <body class="bg-zinc-950 text-white font-sans">
+    <canvas id="myCanvas"></canvas>
     <div class="relative">
         <header class="bg-zinc-800">
             <nav class="py-4 flex justify-end items-center container mx-auto">
@@ -89,5 +90,6 @@ $success = isset($_SESSION['success']) ? $_SESSION['success'] : '';
                 <p class="text-sm">© Printers Only Fans Brought to you by 1728studios.com</p>
             </div>
         </footer>
+        <script src='background.js'></script>
 </body>
 </html>
