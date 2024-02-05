@@ -28,8 +28,8 @@ if (!isset($_SESSION['user_id'])) {
             <div style="position: relative; width: 100%; padding-bottom: 56.25%;">
                 <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/zpAZEljnjhA?si=02yM1ndoeloSboL3" title="Printers Only Live Stream" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-        <h3 class="text-1xl mb-4">Background Art Donated by Unknown</h3>
         </div>
+        <h3 class="text-1xl mb-4">Background Art Donated by Unknown</h3>
     </main>
     
     
