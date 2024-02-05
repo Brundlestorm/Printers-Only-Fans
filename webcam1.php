@@ -23,6 +23,7 @@ if (!isset($_SESSION['user_id'])) {
 
     <main class="flex flex-col items-center justify-center min-h-screen p-4">
         <h3 class="text-2xl mb-4">This is where the magic happens</h3>
+        <h3 class="text-2xl mb-4">Background Art Donated by Unknown</h3>
         <div class="youtube-live-stream w-full max-w-4xl">
             <!-- Use padding-bottom to create the 16:9 aspect ratio -->
             <div style="position: relative; width: 100%; padding-bottom: 56.25%;">
