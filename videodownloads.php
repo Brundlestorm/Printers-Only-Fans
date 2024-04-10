@@ -24,38 +24,46 @@ if (!isset($_SESSION['user_id'])) {
 
 
 
-    <main>
-        <?php
-        $servername = "localhost";
-        $username = "octoprint";
-        $password = "Downloadmore1";
-        $dbname = "timelapse_db";
+   <main>
+    <?php
+    $servername = "localhost";
+    $username = "octoprint";
+    $password = "Downloadmore1";
+    $dbname = "timelapse_db";
 
-        $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-        $sql = "SELECT filename, filepath FROM videos";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
-        $result = $stmt->get_result();
+    $sql = "SELECT filename, filepath FROM videos";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-        if ($result->num_rows > 0) {
-            echo "<ul>";
-            while($row = $result->fetch_assoc()) {
-                echo "<li><a href='serve_file?file=" . urlencode($row["filename"]) . "'>" . htmlspecialchars($row["filename"]) . "</a></li>";
+    if ($result->num_rows > 0) {
+        echo "<div class='columns'>";
+        $count = 0;
+        while($row = $result->fetch_assoc()) {
+            if ($count % 10 == 0 && $count != 0) {
+                echo "</div><div class='columns'>";
             }
-            echo "</ul>";
-        } else {
-            echo "0 results";
+            echo "<div class='column'>";
+            echo "<a href='serve_file?file=" . urlencode($row["filename"]) . "'>" . htmlspecialchars($row["filename"]) . "</a>";
+            echo "</div>";
+            $count++;
         }
+        echo "</div>";
+    } else {
+        echo "0 results";
+    }
 
-        $stmt->close();
-        $conn->close();
-        ?>
-    </main>
+    $stmt->close();
+    $conn->close();
+    ?>
+</main>
+
  
     
 
