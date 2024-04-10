@@ -19,7 +19,7 @@ if (!isset($_SESSION['user_id'])) {
     </video>
 </section>
 
-<main>
+<main class="flex flex-wrap justify-center">
     <?php
     $servername = "localhost";
     $username = "octoprint";
@@ -38,18 +38,11 @@ if (!isset($_SESSION['user_id'])) {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        $count = 0;
-        echo "<div class='columns'>";
         while($row = $result->fetch_assoc()) {
-            if ($count % 10 == 0 && $count != 0) {
-                echo "</div><div class='columns'>";
-            }
-            echo "<div class='column'>";
+            echo "<div class='w-1/5 p-2'>";
             echo "<a href='serve_file?file=" . urlencode($row["filename"]) . "'>" . htmlspecialchars($row["filename"]) . "</a>";
             echo "</div>";
-            $count++;
         }
-        echo "</div>";
     } else {
         echo "0 results";
     }
