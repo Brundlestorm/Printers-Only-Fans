@@ -38,8 +38,8 @@ if (!isset($_SESSION['user_id'])) {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        echo "<div class='columns'>";
         $count = 0;
+        echo "<div class='columns'>";
         while($row = $result->fetch_assoc()) {
             if ($count % 10 == 0 && $count != 0) {
                 echo "</div><div class='columns'>";
@@ -62,3 +62,4 @@ if (!isset($_SESSION['user_id'])) {
 <?php include 'footer.php'; ?>
 </body>
 </html>
+
