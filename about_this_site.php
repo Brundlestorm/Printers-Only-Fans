@@ -8,13 +8,14 @@
     </video>
 </section>
 
-<section class="text-center mt-8 mx-auto max-w-2xl">
-    <h2 class="text-3xl font-bold mb-4">About Our Site</h2>
-    <p class="text-lg text-gray-700">
-        This website was created to provide information about our company and its products. We aim to serve our customers by offering high-quality services and solutions. Our team is dedicated to ensuring customer satisfaction and delivering excellence in everything we do.
-    </p>
-</section>
-
+<main class="container mx-auto my-8 mt-36 flex flex-row items-center justify-center container-mobile">
+       <section class="text-center mt-8 mx-auto max-w-2xl">
+           <h2 class="text-3xl font-bold mb-4">About Our Site</h2>
+           <p class="text-lg text-gray-700">
+               This website was created to provide information about our company and its products. We aim to serve our customers by offering high-quality services and solutions. Our team is dedicated to ensuring customer satisfaction and delivering excellence in everything we do.
+           </p>
+       </section>
+ </main>
 
 <?php include 'footer.php'; ?>
 </body>
