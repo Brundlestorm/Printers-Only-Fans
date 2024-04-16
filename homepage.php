@@ -12,6 +12,7 @@
     <main class="container mx-auto my-8 mt-36 flex flex-row items-center justify-center container-mobile">
         <a href="webcam1" class="card-button card-button-mobile hover-effect mr-4">Live Stream</a>
         <a href="videolibrary" class="card-button card-button-mobile hover-effect">Download Library</a>
+        <a href="about_this_site" class="card-button card-button-mobile hover-effect">About Printers Only</a>
     </main>
     
 
