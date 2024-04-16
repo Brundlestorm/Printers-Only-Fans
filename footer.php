@@ -7,7 +7,7 @@
                 <a href="https://www.stjude.org" target="_blank" class="text-blue-400 hover:text-blue-300 text-sm">stjude.org</a>
             </div>
             <div class="footer-links space-x-2 mb-2">
-                <a href="https://www.1728studios.com/about" target="_blank" class="hover:text-zinc-300 hover-effect text-sm">About</a>
+                <a href="https://www.1728studios.com/about" target="_blank" class="hover:text-zinc-300 hover-effect text-sm">About 1728Studios</a>
             </div>
             <p class="text-sm">© Printers Only Fans Brought to you by 1728studios.com</p>
         </div>
