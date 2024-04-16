@@ -18,6 +18,7 @@
                     <a href="features" class="hover:text-zinc-300 hover-effect">Features</a> <!-- Changed to  -->
                     <a href="pricing" class="hover:text-zinc-300 hover-effect">Pricing</a> <!-- Changed to  -->
                     <a href="contact" class="hover:text-zinc-300 hover-effect">Contact</a> <!-- Changed to  -->
+                    <a href="about_this_site" class="hover:text-zinc-300 hover-effect">About Printers Only</a> <!-- Changed to  -->
                 </div>
             </nav>
         </header>
