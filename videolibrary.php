@@ -34,6 +34,7 @@ if (!isset($_SESSION['user_id'])) {
             So come, join us in this delightful journey where whimsy and generosity intertwine. Together, let's celebrate the joy of creativity while making a difference in the world."
         </p>
     </section>
+    <a href="videodownloads" class="text-white bg-black px-4 py-2 rounded border-2 border-white hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition ease-in-out duration-300 mt-8">Video Downloads</a>
 </main>
 
 
