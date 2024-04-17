@@ -23,15 +23,13 @@ if (!isset($_SESSION['user_id'])) {
     <section class="text-center mt-8 mx-auto max-w-2xl">
         <h2 class="text-3xl font-bold mb-4">About Our Site</h2>
         <p class="text-lg text-yellow-500">
-            "Welcome to Printers Only Fans, a cozy corner of the digital realm where enthusiasts gather to revel in the artistry of 3-D printing. With a nod to the playful spirit of Douglas Adams, our site embraces a touch of whimsy that's sure to bring a smile to your face.
+            ""Welcome to the peculiar realm of Printers Only Fans, where the mundane meets the bizarre in a delightful dance of 3-D printing escapades. Here, amidst the tangled web of filament and the occasional intrusion of ill-placed supports, you'll find a treasure trove of raw footage straight from the belly of the printer.
 
-            Conceived in jest and camaraderie, Printers Only Fans playfully pokes fun at conventions with its cheeky name. But beneath the lighthearted facade lies a heart of gold—60% of our proceeds are dedicated to supporting children's health research.
+For a mere $0.99 per download, you'll gain access to these unfiltered glimpses of printer magic—complete with wonky lighting, unwelcome supports, and even the occasional cameo appearance of a human arm. It's not premium content, mind you, but rather a whimsical journey into the unpredictable world of hobbyist printing.
 
-            At the heart of our digital sanctuary is a live camera feed, offering a mesmerizing glimpse into the mesmerizing world of 3-D printing. Watch as layers of filament come together to form intricate creations, all from the comfort of your screen.
+This isn't your typical instructional guide or polished showcase. No, this is a celebration of imperfection, a testament to the joy of tinkering, and a reminder that sometimes the most delightful discoveries come from embracing the unexpected.
 
-            And if curiosity beckons, explore our library of downloads, where treasures of creativity await. For a small fee, these digital delights can be yours to enjoy and adorn your own digital domain.
-
-            So come, join us in this delightful journey where whimsy and generosity intertwine. Together, let's celebrate the joy of creativity while making a difference in the world."
+So join us, fellow adventurers, as we embark on this lighthearted romp through the quirky corners of 3-D printing. Together, let's revel in the joy of creativity, chuckle at the absurdity of it all, and perhaps, just perhaps, find a moment of whimsy in the most unexpected of places.""
         </p>
     </section>
     <a href="videodownloads" class="text-white bg-black px-4 py-2 rounded border-2 border-white hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition ease-in-out duration-300 mt-8">Video Downloads</a>
