@@ -27,8 +27,8 @@ if (!isset($_SESSION['user_id'])) {
     main {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 5px 5px; /* Reduced vertical gap by half */
-        padding: 5px; /* Reduced padding */
+        grid-gap: 5px 3px; /* Reduced vertical gap by half */
+        padding: 3px; /* Reduced padding */
     }
 </style>
 
