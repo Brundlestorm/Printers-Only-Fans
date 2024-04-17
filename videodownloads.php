@@ -16,10 +16,11 @@ if (!isset($_SESSION['user_id'])) {
     /* Updated CSS to target the <a> tags */
     main a {
         border: 2px solid #ccc;
-        padding: 10px;
+        padding: 8px; /* Reduced padding */
         display: block; /* Ensure each link is on a separate line */
         text-align: center;
         margin: 5px;
+        font-size: 14px; /* Reduced font size */
     }
 </style>
 
@@ -30,7 +31,7 @@ if (!isset($_SESSION['user_id'])) {
     </video>
 </section>
 
-<main style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 10px; padding: 20px;">
+<main style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 10px; padding: 10px;"> <!-- Reduced padding -->
     <?php
     $servername = "localhost";
     $username = "octoprint";
