@@ -16,10 +16,16 @@ if (!isset($_SESSION['user_id'])) {
     /* Updated CSS to target the <a> tags */
     main a {
         border: 2px solid #ccc;
-        padding: 10px;
+        padding: 5px; /* Reduced padding */
         display: block; /* Ensure each link is on a separate line */
         text-align: center;
-        margin: 5px;
+        margin: 3px; /* Reduced margin */
+    }
+    .grid-item {
+        width: calc(33.33% - 10px); /* Adjusted width for 3 columns with reduced padding and margin */
+        padding: 5px; /* Reduced padding */
+        box-sizing: border-box; /* Ensure padding is included in the width */
+        margin-bottom: 10px; /* Added margin between grid items */
     }
 </style>
 
@@ -30,7 +36,7 @@ if (!isset($_SESSION['user_id'])) {
     </video>
 </section>
 
-<main style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 10px; padding: 20px;">
+<main style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 10px; padding: 10px;"> <!-- Reduced padding -->
     <?php
     $servername = "localhost";
     $username = "octoprint";
@@ -67,5 +73,6 @@ if (!isset($_SESSION['user_id'])) {
 <?php include 'footer.php'; ?>
 </body>
 </html>
+
 
 
