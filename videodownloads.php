@@ -19,7 +19,7 @@ if (!isset($_SESSION['user_id'])) {
     </video>
 </section>
 
-<main class="flex flex-wrap justify-center">
+<main style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); grid-gap: 10px; padding: 20px;">
     <?php
     $servername = "localhost";
     $username = "octoprint";
