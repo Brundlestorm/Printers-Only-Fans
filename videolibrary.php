@@ -31,9 +31,9 @@ This isn't your typical instructional guide or polished showcase. No, this is a 
 
 So join us, fellow adventurers, as we embark on this lighthearted romp through the quirky corners of 3-D printing. Together, let's revel in the joy of creativity, chuckle at the absurdity of it all, and perhaps, just perhaps, find a moment of whimsy in the most unexpected of places.""
         </p>
-    </div>
-    <div class="mt-8">
-        <a href="videodownloads" class="text-white bg-black px-4 py-2 rounded border-2 border-white hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition ease-in-out duration-300">Video Downloads</a>
+        <div class="mt-8">
+            <a href="videodownloads" class="text-white bg-black px-4 py-2 rounded border-2 border-white hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition ease-in-out duration-300">Video Downloads</a>
+        </div>
     </div>
 </main>
 
@@ -41,5 +41,6 @@ So join us, fellow adventurers, as we embark on this lighthearted romp through t
 <?php include 'footer.php'; ?>
 </body>
 </html>
+
 
 
