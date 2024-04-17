@@ -12,18 +12,21 @@ if (!isset($_SESSION['user_id'])) {
 <?php include 'header.php'; ?>
 
 
-    <section class="flex justify-center items-center">
+       <section class="flex justify-center items-center">
     <video class="w-48 h-48 rounded-full border-4 border-zinc-400 ml-4 mt-4" loop autoplay playsinline muted>
         <source src="logo.mp4" type="video/mp4">
         <img src="logo.png" alt="Printers Only Fans Logo" class="w-48 h-48 rounded-full border-4 border-zinc-400 ml-4 mt-4">
     </video>
 </section>
 
-
-    <main class="flex flex-col items-center justify-center min-h-screen">
-    <p class="text-lg text-black mb-4">Changing text:</p>
-    <a href="videodownloads" class="text-white bg-black px-4 py-2 rounded border-2 border-white hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition ease-in-out duration-300">Video Downloads</a>
-</main>
+<main class="container mx-auto my-8 mt-36 flex flex-row items-center justify-center container-mobile">
+       <section class="text-center mt-8 mx-auto max-w-2xl">
+           <h2 class="text-3xl font-bold mb-4">About Our Site</h2>
+          <p class="text-lg text-yellow-500">
+               " Together, let's celebrate the joy of creativity while making a difference in the world."
+           </p>
+       </section>
+ </main>
 
 
 <?php include 'footer.php'; ?>
