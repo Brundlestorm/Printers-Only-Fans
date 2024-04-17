@@ -16,7 +16,7 @@ if (!isset($_SESSION['user_id'])) {
     /* Updated CSS to target the <a> tags */
     main a {
         border: 2px solid #ccc;
-        padding: 8px; /* Reduced padding */
+        padding: 6px; /* Reduced padding */
         display: block; /* Ensure each link is on a separate line */
         text-align: center;
         margin: 5px;
