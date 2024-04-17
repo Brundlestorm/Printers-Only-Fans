@@ -12,6 +12,15 @@ if (!isset($_SESSION['user_id'])) {
 
 <?php include 'header.php'; ?>
 
+<style>
+    .grid-item {
+        border: 2px solid #ccc;
+        padding: 10px;
+        text-align: center;
+        margin: 5px;
+    }
+</style>
+
 <section class="flex justify-center items-center">
     <video class="w-48 h-48 rounded-full border-4 border-zinc-400 ml-4 mt-4" loop autoplay playsinline muted>
         <source src="logo.mp4" type="video/mp4">
