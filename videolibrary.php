@@ -21,7 +21,7 @@ if (!isset($_SESSION['user_id'])) {
 
 <main class="container mx-auto my-8 mt-36 flex flex-row items-center justify-center container-mobile">
     <section class="text-center mt-8 mx-auto max-w-2xl">
-        <h2 class="text-3xl font-bold mb-4">About Our Site</h2>
+        <h2 class="text-3xl font-bold mb-4">A word about downloads</h2>
         <p class="text-lg text-yellow-500">
             ""Welcome to the peculiar realm of Printers Only Fans, where the mundane meets the bizarre in a delightful dance of 3-D printing escapades. Here, amidst the tangled web of filament and the occasional intrusion of ill-placed supports, you'll find a treasure trove of raw footage straight from the belly of the printer.
 
