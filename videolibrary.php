@@ -21,7 +21,7 @@ if (!isset($_SESSION['user_id'])) {
 
 
     <main class="flex flex-col items-center justify-center min-h-screen">
-    <p class="text-lg text-black mb-4">Browse our Wonderous Wares:</p>
+    <p class="text-lg text-black mb-4">Changing text:</p>
     <a href="videodownloads" class="text-white bg-black px-4 py-2 rounded border-2 border-white hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition ease-in-out duration-300">Video Downloads</a>
 </main>
 
