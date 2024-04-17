@@ -11,7 +11,7 @@
 <main class="container mx-auto my-8 mt-36 flex flex-row items-center justify-center container-mobile">
        <section class="text-center mt-8 mx-auto max-w-2xl">
            <h2 class="text-3xl font-bold mb-4">About Our Site</h2>
-           <p class="text-lg text-gray-700">
+          <p class="text-lg text-yellow-500">
                "Welcome to Printers Only Fans, a cozy corner of the digital realm where enthusiasts gather to revel in the artistry of 3-D printing. With a nod to the playful spirit of Douglas Adams, our site embraces a touch of whimsy that's sure to bring a smile to your face.
 
 Conceived in jest and camaraderie, Printers Only Fans playfully pokes fun at conventions with its cheeky name. But beneath the lighthearted facade lies a heart of gold—60% of our proceeds are dedicated to supporting children's health research.
