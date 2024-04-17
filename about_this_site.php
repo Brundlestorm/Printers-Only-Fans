@@ -16,7 +16,7 @@
 
 Conceived in jest and camaraderie, Printers Only Fans playfully pokes fun at conventions with its cheeky name. But beneath the lighthearted facade lies a heart of gold—60% of our proceeds are dedicated to supporting children's health research.
 
-At the heart of our digital sanctuary is a live camera feed, offering a mesmerizing glimpse into the mesmerizing world of 3-D printing. Watch as layers of filament come together to form intricate creations, all from the comfort of your screen.
+At the heart of our digital sanctuary is a live camera feed, offering a mesmerizing glimpse into the inspiring world of 3-D printing. Watch as layers of filament come together to form intricate creations, all from the comfort of your screen.
 
 And if curiosity beckons, explore our library of downloads, where treasures of creativity await. For a small fee, these digital delights can be yours to enjoy and adorn your own digital domain.
 
