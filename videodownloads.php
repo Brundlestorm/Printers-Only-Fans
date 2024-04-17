@@ -22,6 +22,14 @@ if (!isset($_SESSION['user_id'])) {
         margin: 5px;
         font-size: 14px; /* Reduced font size */
     }
+
+    /* Adjusted grid gap */
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px 10px; /* Reduced vertical gap by half */
+        padding: 10px; /* Reduced padding */
+    }
 </style>
 
 <section class="flex justify-center items-center">
@@ -31,7 +39,7 @@ if (!isset($_SESSION['user_id'])) {
     </video>
 </section>
 
-<main style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 10px; padding: 10px;"> <!-- Reduced padding -->
+<main>
     <?php
     $servername = "localhost";
     $username = "octoprint";
