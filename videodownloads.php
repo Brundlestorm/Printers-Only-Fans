@@ -13,9 +13,11 @@ if (!isset($_SESSION['user_id'])) {
 <?php include 'header.php'; ?>
 
 <style>
-    .grid-item {
+    /* Updated CSS to target the <a> tags */
+    main a {
         border: 2px solid #ccc;
         padding: 10px;
+        display: block; /* Ensure each link is on a separate line */
         text-align: center;
         margin: 5px;
     }
@@ -49,7 +51,7 @@ if (!isset($_SESSION['user_id'])) {
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             $filename = pathinfo($row["filename"], PATHINFO_FILENAME); // Extract filename without extension
-            echo "<div class='w-1/5 p-2'>";
+            echo "<div class='grid-item'>"; // Adding class for grid item
             echo "<a href='serve_file?file=" . urlencode($row["filename"]) . "'>" . htmlspecialchars($filename) . "</a>";
             echo "</div>";
         }
