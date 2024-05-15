@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['email'] = $email;
 
             // Redirect to main page or dashboard
-            header("Location: homepage");
+            header("Location: homepage1");
             exit;
         } else {
             // Invalid password
