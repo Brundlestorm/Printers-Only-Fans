@@ -8,23 +8,32 @@ document.addEventListener("DOMContentLoaded", function() {
         'X-Api-Key': 'E969BA879E504CDCB183A6FF5E405FE0'
       }
     })
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) throw new Error('Network response was not ok');
+      return response.json();
+    })
     .then(data => {
       const liveFeedButton = document.getElementById('liveFeedButton');
       if (!data.state.flags.operational) {
         liveFeedButton.onclick = function() {
-          window.location.href = '/our_apologies.php';  // Redirect to maintenance page
+          window.location.href = '/our_apologies.php';
         };
         liveFeedButton.innerText = 'Check Back Soon';
       } else {
-        liveFeedButton.href = '/webcam1';  // Link to live stream
+        liveFeedButton.href = '/webcam1';
         liveFeedButton.innerText = 'Live Stream';
       }
     })
-    .catch(error => console.error('Error fetching printer status:', error));
+    .catch(error => {
+      console.error('Error fetching printer status:', error);
+      const liveFeedButton = document.getElementById('liveFeedButton');
+      liveFeedButton.onclick = function() {
+        window.location.href = '/our_apologies.php';
+      };
+      liveFeedButton.innerText = 'Check Back Soon';
+    });
   };
 
-  // Check the printer status immediately and then every 5 minutes
   checkPrinterStatus();
   setInterval(checkPrinterStatus, 300000); // 300000 ms = 5 minutes
 });
