@@ -12,12 +12,10 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(data => {
       const liveFeedButton = document.getElementById('liveFeedButton');
       if (!data.state.flags.operational) {
-        liveFeedButton.onclick = function() {
-          window.location.href = '/our_apologies.php';  // Redirect to maintenance page
-        };
+        liveFeedButton.onclick = () => window.location.href = '/our_apologies.php';
         liveFeedButton.innerText = 'Check Back Soon';
       } else {
-        liveFeedButton.href = '/webcam1';  // Link to live stream
+        liveFeedButton.setAttribute('href', '/webcam1');
         liveFeedButton.innerText = 'Live Stream';
       }
     })
@@ -45,4 +43,5 @@ document.addEventListener("DOMContentLoaded", function() {
 <?php include 'footer.php'; ?>
 </body>
 </html>
+
 
