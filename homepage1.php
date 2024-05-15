@@ -3,7 +3,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const checkPrinterStatus = () => {
-    fetch('http://your-octoprint-server/api/printer', {
+    fetch('http://10.0.0.19/api/printer', {
       headers: {
         'X-Api-Key': '5192AAC245424DCBA64E565E21450CDF'
       }
