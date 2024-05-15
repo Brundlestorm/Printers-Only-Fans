@@ -12,16 +12,17 @@
        <section class="text-center mt-8 mx-auto max-w-2xl">
            <h2 class="text-3xl font-bold mb-4">About Our Site</h2>
           <p class="text-lg text-yellow-500">
-               "Welcome to Printers Only Fans, a cozy corner of the digital realm where enthusiasts gather to revel in the artistry of 3-D printing. With a nod to the playful spirit of Douglas Adams, our site embraces a touch of whimsy that's sure to bring a smile to your face.
+              Oh Dear, Slight Snag in the Fabric of Reality!
 
-Conceived in jest and camaraderie, Printers Only Fans playfully pokes fun at conventions with its cheeky name. But beneath the lighthearted facade lies a heart of gold—60% of our proceeds are dedicated to supporting children's health research.
+Greetings, dear visitor of the cosmos and aficionado of the three-dimensional craft! We seem to have encountered a minor hiccup, slightly less troublesome than a Vogon poetry recital but certainly more urgent than your average cup of tea.
 
-At the heart of our digital sanctuary is a live camera feed, offering a mesmerizing glimpse into the inspiring world of 3-D printing. Watch as layers of filament come together to form intricate creations, all from the comfort of your screen.
+Our faithful 3-D printer, affectionately dubbed "The Infinite Improbability Engine," has temporarily ceased to fabricate wonders. It's taking a well-deserved breather, possibly to ponder the mysteries of the universe or just to untangle some rebellious filament.
 
-And if curiosity beckons, explore our library of downloads, where treasures of creativity await. For a small fee, these digital delights can be yours to enjoy and adorn your own digital domain.
+Fear not, for this is but a transient anomaly in our otherwise smooth operation. During this brief interlude, why not explore our digital library? It's brimming with creations so exquisite that they might just make a Pan Galactic Gargle Blaster seem mundane in comparison.
 
-So come, join us in this delightful journey where whimsy and generosity intertwine. Together, let's celebrate the joy of creativity while making a difference in the world."
-           </p>
+Check back soon, as we expect to resume our live feed before you can say "42." After all, we’re all just trying to make sense of this grand, beautiful mess — one layer at a time.
+
+Thank you for your patience, and remember: "Don't Panic!" Your support continues to make a universe of difference! </p>
        </section>
  </main>
 
