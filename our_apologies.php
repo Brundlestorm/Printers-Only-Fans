@@ -10,7 +10,7 @@
 
 <main class="container mx-auto my-8 mt-36 flex flex-row items-center justify-center container-mobile">
        <section class="text-center mt-8 mx-auto max-w-2xl">
-           <h2 class="text-3xl font-bold mb-4">About Our Site</h2>
+           <h2 class="text-3xl font-bold mb-4">Bypasses must be built</h2>
           <p class="text-lg text-yellow-500">
               Oh Dear, Slight Snag in the Fabric of Reality!
 
