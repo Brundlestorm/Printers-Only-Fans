@@ -14,7 +14,7 @@
         <header class="bg-zinc-800">
             <nav class="py-4 flex justify-end items-center container mx-auto">
                 <div class="space-x-4 mr-4">
-                    <a href="homepage" class="hover:text-zinc-300 hover-effect">Home</a> <!-- Changed to  -->
+                    <a href="homepage1" class="hover:text-zinc-300 hover-effect">Home</a> <!-- Changed to  -->
                     <a href="features" class="hover:text-zinc-300 hover-effect">Features</a> <!-- Changed to  -->
                     <a href="pricing" class="hover:text-zinc-300 hover-effect">Pricing</a> <!-- Changed to  -->
                     <a href="contact" class="hover:text-zinc-300 hover-effect">Contact</a> <!-- Changed to  -->
