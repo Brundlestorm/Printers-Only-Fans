@@ -4,7 +4,7 @@ session_start(); // Start the session
 // Check if the user is signed in
 if (isset($_SESSION['user_id'])) {
     // Redirect to homepage
-    header("Location: homepage1");
+    header("Location: homepage");
     exit;
 }
 ?>
