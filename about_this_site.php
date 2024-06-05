@@ -14,7 +14,7 @@
           <p class="text-lg text-yellow-500">
                "Welcome to Printers Only Fans, a cozy corner of the digital realm where enthusiasts gather to revel in the artistry of 3-D printing. With a nod to the playful spirit of Douglas Adams, our site embraces a touch of whimsy that's sure to bring a smile to your face.
 
-Conceived in jest and camaraderie, Printers Only Fans playfully pokes fun at conventions with its cheeky name. But beneath the lighthearted facade lies a heart of gold—60% of our proceeds are dedicated to supporting children's health research.
+Conceived in jest and camaraderie, Printers Only Fans playfully pokes fun at conventions with its cheeky name.
 
 At the heart of our digital sanctuary is a live camera feed, offering a mesmerizing glimpse into the inspiring world of 3-D printing. Watch as layers of filament come together to form intricate creations, all from the comfort of your screen.
 
