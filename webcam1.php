@@ -26,7 +26,7 @@ if (!isset($_SESSION['user_id'])) {
         <div class="youtube-live-stream w-full max-w-4xl">
             <!-- Use padding-bottom to create the 16:9 aspect ratio -->
             <div style="position: relative; width: 100%; padding-bottom: 56.25%;">
-                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src= "https://www.youtube.com/embed/DfZcEQ72wZc?si=lYGPYwVxZO20UQbs" title="Printers Only Live Stream" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src= "https://www.youtube.com/embed/https://www.youtube.com/embed/wPsbNAylGOA?si=ormxdtsqJrTp19ze" title="Printers Only Live Stream" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
         <h3 class="text-1xl mb-4">Background Art Donated by JLMoney84</h3>
