@@ -18,7 +18,7 @@ Conceived in jest and camaraderie, Printers Only Fans playfully pokes fun at con
 
 At the heart of our digital sanctuary is a live camera feed, offering a mesmerizing glimpse into the inspiring world of 3-D printing. Watch as layers of filament come together to form intricate creations, all from the comfort of your screen.
 
-And if curiosity beckons, explore our library of downloads, where treasures of creativity await. For a small fee, these digital delights can be yours to enjoy and adorn your own digital domain.
+And if curiosity beckons, explore our library of downloads, where treasures of creativity await. These digital delights can be yours to enjoy and adorn your own digital domain.
 
 So come, join us in this delightful journey where whimsy and generosity intertwine. Together, let's celebrate the joy of creativity while making a difference in the world."
            </p>
