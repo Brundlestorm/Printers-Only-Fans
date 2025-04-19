@@ -17,14 +17,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $address = trim($_POST['address']);
     $printSuggestion = trim($_POST['print-suggestion']);
 
-    if (empty($email) || empty($password) || empty($confirmPassword)) {
-        $_SESSION['error'] = "Please fill in all required fields.";
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $_SESSION['error'] = "Invalid email format.";
-    } elseif ($password !== $confirmPassword) {
-        $_SESSION['error'] = "Passwords do not match.";
-    } else {
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+if (empty($email) || empty($password) || empty($confirmPassword)) {
+    $_SESSION['error'] = "Please fill in all required fields.";
+    header("Location: registrationpage.php");
+    exit();
+}
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $_SESSION['error'] = "Invalid email format.";
+    header("Location: registrationpage.php");
+    exit();
+}
+
+if ($password !== $confirmPassword) {
+    $_SESSION['error'] = "Passwords do not match.";
+    header("Location: registrationpage.php");
+    exit();
+}
+
+// Passed all validation — continue
+$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
         $stmt = $conn->prepare("INSERT INTO users (email, password, address, print_suggestion) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("ssss", $email, $hashedPassword, $address, $printSuggestion);
