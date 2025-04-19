@@ -24,7 +24,7 @@ unset($_SESSION['success']);
         <div class="text-green-500 font-bold mb-4"><?php echo $success; ?></div>
     <?php endif; ?>
 
-    <form class="w-full max-w-md bg-black p-6 rounded-lg shadow-lg" method="POST" action="register_user.php">
+    <form class="w-full max-w-md bg-black p-6 rounded-lg shadow-lg" method="POST" action="process_registration.php">
         <div class="mb-6">
             <label for="email" class="block text-white text-lg mb-2">Username (Email):</label>
             <input type="email" id="email" name="email" placeholder="Email Address" required
