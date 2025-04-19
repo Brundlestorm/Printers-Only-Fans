@@ -25,7 +25,7 @@ if (!isset($_SESSION['user_id'])) {
         <p class="text-lg text-yellow-500">
             ""Welcome to the peculiar realm of Printers Only Fans, where the mundane meets the bizarre in a delightful dance of 3-D printing escapades. Here, amidst the tangled web of filament and the occasional intrusion of ill-placed supports, you'll find a treasure trove of raw footage straight from the belly of the printer.
 
-For a mere $0.99 per download, you'll gain access to these unfiltered glimpses of printer magic—complete with wonky lighting, unwelcome supports, and even the occasional cameo appearance of a human arm. It's not premium content, mind you, but rather a whimsical journey into the unpredictable world of hobbyist printing.
+Here you'll gain access to these unfiltered glimpses of printer magic—complete with wonky lighting, unwelcome supports, and even the occasional cameo appearance of a human arm. It's not premium content, mind you, but rather a whimsical journey into the unpredictable world of hobbyist printing.
 
 This isn't your typical instructional guide or polished showcase. No, this is a celebration of imperfection, a testament to the joy of tinkering, and a reminder that sometimes the most delightful discoveries come from embracing the unexpected.
 
