@@ -4,11 +4,11 @@ echo "<pre>";
 print_r($_POST);
 echo "</pre>";
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    echo "Form was not submitted via POST!";
-} else if (empty($_POST)) {
-    echo "POST request received but empty.";
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    echo "<p style='color: red;'>Form was not submitted via POST!</p>";
+} elseif (empty($_POST)) {
+    echo "<p style='color: red;'>POST is empty!</p>";
 } else {
-    echo "POST received and contains values.";
+    echo "<p style='color: green;'>POST received with data!</p>";
 }
 ?>
