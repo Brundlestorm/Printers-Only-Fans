@@ -1,4 +1,5 @@
 <?php
+ob_start(); // Prevent premature output
 session_start();
 
 // Database connection
@@ -9,7 +10,6 @@ if ($conn->connect_error) {
     exit();
 }
 
-// Handle POST submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST['email']);
     $password = $_POST['password'];
@@ -17,7 +17,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $address = trim($_POST['address']);
     $printSuggestion = trim($_POST['print-suggestion']);
 
-    // Validation
     if (empty($email) || empty($password) || empty($confirmPassword)) {
         $_SESSION['error'] = "Please fill in all required fields.";
         header("Location: registrationpage.php");
@@ -36,10 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
-    // Insert into database
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-    $sql = "INSERT INTO users (email, password, address, print_suggestion) VALUES (?, ?, ?, ?)";
-    $stmt = $conn->prepare($sql);
+    $stmt = $conn->prepare("INSERT INTO users (email, password, address, print_suggestion) VALUES (?, ?, ?, ?)");
 
     if (!$stmt) {
         $_SESSION['error'] = "Prepare failed: " . $conn->error;
@@ -56,9 +53,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $stmt->close();
-    $conn->close();
-
-    header("Location: registrationpage.php");
-    exit();
 }
+
+$conn->close();
+header("Location: registrationpage.php");
+exit();
+ob_end_flush(); // Flush the output buffer
 ?>
