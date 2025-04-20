@@ -1,82 +1,76 @@
 <?php
-ob_start();
 session_start();
 
-$debug_log = __DIR__ . '/form_debug.log';  // Safe, inside the project folder
-file_put_contents($debug_log, "== Form submitted ==\n", FILE_APPEND);
+// Enable error reporting for debugging (remove in production)
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 // Database connection
 $conn = new mysqli("localhost", "octoprint", "Downloadmore1", "timelapse_db");
 if ($conn->connect_error) {
-    file_put_contents($debug_log, "DB connect error: " . $conn->connect_error . "\n", FILE_APPEND);
+    error_log("Database connection failed: " . $conn->connect_error);
     $_SESSION['error'] = "Database connection failed.";
     header("Location: registrationpage.php");
     exit();
 }
 
+// Handle POST submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Dump all POST data
-    file_put_contents($debug_log, print_r($_POST, true), FILE_APPEND);
-
     $email = trim($_POST['email'] ?? '');
     $password = $_POST['password'] ?? '';
     $confirmPassword = $_POST['confirm-password'] ?? '';
     $address = trim($_POST['address'] ?? '');
     $printSuggestion = trim($_POST['print-suggestion'] ?? '');
 
-    file_put_contents($debug_log, "Email: $email | Password: $password | Confirm: $confirmPassword\n", FILE_APPEND);
-
-    // Validation
+    // Validate inputs
     if (empty($email) || empty($password) || empty($confirmPassword)) {
         $_SESSION['error'] = "Please fill in all required fields.";
-        file_put_contents($debug_log, "Validation failed: empty field(s)\n", FILE_APPEND);
         header("Location: registrationpage.php");
         exit();
     }
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $_SESSION['error'] = "Invalid email format.";
-        file_put_contents($debug_log, "Validation failed: invalid email\n", FILE_APPEND);
         header("Location: registrationpage.php");
         exit();
     }
 
     if ($password !== $confirmPassword) {
         $_SESSION['error'] = "Passwords do not match.";
-        file_put_contents($debug_log, "Validation failed: passwords mismatch\n", FILE_APPEND);
         header("Location: registrationpage.php");
         exit();
     }
 
+    // Prepare and execute database insertion
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     $stmt = $conn->prepare("INSERT INTO users (email, password, address, print_suggestion) VALUES (?, ?, ?, ?)");
-
-    if (!$stmt) {
-        $_SESSION['error'] = "Prepare failed: " . $conn->error;
-        file_put_contents($debug_log, "Prepare failed: " . $conn->error . "\n", FILE_APPEND);
+    if ($stmt === false) {
+        error_log("Prepare failed: " . $conn->error);
+        $_SESSION['error'] = "Database prepare error.";
         header("Location: registrationpage.php");
         exit();
     }
 
     $stmt->bind_param("ssss", $email, $hashedPassword, $address, $printSuggestion);
-
-    if (!$stmt->execute()) {
-        $_SESSION['error'] = "Execute failed: " . $stmt->error;
-        file_put_contents($debug_log, "Execute failed: " . $stmt->error . "\n", FILE_APPEND);
-    } else {
+    if ($stmt->execute()) {
         $_SESSION['success'] = "Registration successful!";
-        file_put_contents($debug_log, "Registration succeeded!\n", FILE_APPEND);
+    } else {
+        error_log("Execute failed: " . $stmt->error);
+        if (strpos($stmt->error, 'Duplicate entry') !== false) {
+            $_SESSION['error'] = "That email is already registered.";
+        } else {
+            $_SESSION['error'] = "Database error: " . $stmt->error;
+        }
     }
 
     $stmt->close();
     $conn->close();
-
+    header("Location: registrationpage.php");
+    exit();
+} else {
+    // Redirect if accessed directly (non-POST)
+    $_SESSION['error'] = "Invalid request method.";
     header("Location: registrationpage.php");
     exit();
 }
-
-file_put_contents($debug_log, "No POST received\n", FILE_APPEND);
-header("Location: registrationpage.php");
-exit();
-ob_end_flush();
-?>
