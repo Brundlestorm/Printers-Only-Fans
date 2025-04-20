@@ -1,6 +1,7 @@
 <?php
 ob_start(); // Prevent premature output
 session_start();
+file_put_contents("/tmp/post_data_debug.log", print_r($_POST, true), FILE_APPEND);
 
 // Database connection
 $conn = new mysqli("localhost", "octoprint", "Downloadmore1", "timelapse_db");
